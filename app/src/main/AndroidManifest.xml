@@ -20,6 +20,9 @@
     <uses-permission
         android:required="true"
         android:name="android.permission.NEARBY_WIFI_DEVICES"/>
+    <uses-permission
+        android:name="android.permission.RECORD_AUDIO"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
