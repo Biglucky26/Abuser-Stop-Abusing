@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
 
         Button btn = findViewById(R.id.button);
-
+        //hello
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
