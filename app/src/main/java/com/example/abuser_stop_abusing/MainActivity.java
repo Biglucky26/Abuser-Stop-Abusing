@@ -1,5 +1,6 @@
 package com.example.abuser_stop_abusing;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -16,7 +17,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final IntentFilter intentFilter = new IntentFilter();
+    WifiP2pManager mManager;
+    WifiP2pManager.Channel mChannel;
+
+    BroadcastReceiver mReceiver;
+    IntentFilter intentFilter = new IntentFilter();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +56,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        WifiP2pManager manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
-        WifiP2pManager.Channel channel = manager.initialize(this, getMainLooper(), null);
+        mManager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
+        mChannel = mManager.initialize(this, getMainLooper(), null);
+
+        mReceiver = new WifiDirectBroadcast(mManager, mChannel, MainActivity.this);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(mReceiver, intentFilter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(mReceiver);
+    }
 }
