@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.NetworkInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.widget.Toast;
 
@@ -39,13 +40,7 @@ public class WifiDirectBroadcast extends BroadcastReceiver {
 
             if (mManager != null) {
                 if (ActivityCompat.checkSelfPermission(mMain, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(mMain, android.Manifest.permission.NEARBY_WIFI_DEVICES) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
-                    //    ActivityCompat#requestPermissions
-                    // here to request the missing permissions, and then overriding
-                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                    //                                          int[] grantResults)
-                    // to handle the case where the user grants the permission. See the documentation
-                    // for ActivityCompat#requestPermissions for more details.
+
                     return;
                 }
                 mManager.requestPeers(mChannel, mMain.peerListListener);
@@ -53,6 +48,17 @@ public class WifiDirectBroadcast extends BroadcastReceiver {
         }
         else if(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION.equals(action)) {
             //TODO: implement task happen when connection state change occur
+
+            if (mManager == null) {
+                return;
+            }
+
+            NetworkInfo networkInfo = intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO);
+            if(networkInfo.isConnected()) {
+                mManager.requestConnectionInfo(mChannel, mMain.connectionInfoListener);
+            } else {
+                //do something if disconnected
+            }
         }
         else if(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION.equals(action)) {
             //TODO: respond to this device wifi state changing
