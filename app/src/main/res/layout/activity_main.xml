@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonb4"
         android:layout_width="337dp"
         android:layout_height="324dp"
         android:backgroundTint="@color/red"
