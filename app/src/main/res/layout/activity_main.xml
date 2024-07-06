@@ -5,33 +5,34 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D53F3F"
-    android:backgroundTint="#F0F0F0"
-    android:foregroundTint="#FFFFFF"
-    tools:context=".MainActivity">
+    android:foregroundTint="#497318"
+    tools:context=".MainActivity"
+    android:background="@drawable/porp">
 
     <Button
         android:id="@+id/button"
         android:layout_width="314dp"
         android:layout_height="66dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="88dp"
         android:text="@string/Press"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/buttonb4"
-        android:layout_width="337dp"
-        android:layout_height="324dp"
-        android:backgroundTint="@color/red"
-        android:text="EMERGENCY"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+    <ImageButton
+        android:id="@+id/biggestbutt"
+        android:layout_width="348dp"
+        android:layout_height="355dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.815" />
+        app:layout_constraintVertical_bias="0.355"
+        app:srcCompat="@drawable/pngtree_red_button_reflection_photo_png_image_13464569" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Abuser-Stop-Abusing</string>
     <string name="Hello_World">HelloWorld</string>
-    <string name="Press">Press Me</string>
+    <string name="Press">More</string>
     <string name="result">Why Press?</string>
 </resources>

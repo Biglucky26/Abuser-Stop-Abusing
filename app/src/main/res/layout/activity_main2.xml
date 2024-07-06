@@ -10,98 +10,17 @@
     >
 
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327"
-        android:backgroundTint="@color/green"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
-        android:text="Button"
-        android:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.327" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
-        android:text="Button"
-        android:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.916" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="126dp"
-        android:layout_height="62dp"
-        android:text="Report"
-        android:textColor="@color/black"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textStyle="italic"
-
-        android:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.916" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="121dp"
-        android:layout_height="124dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.168"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79"
-        app:srcCompat="@drawable/whatsapp_image_2024_07_05_at_17_44_08_removebg_preview" />
-
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="133dp"
-        android:layout_height="124dp"
+        android:layout_height="155dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156"
+        app:layout_constraintVertical_bias="0.185"
         app:srcCompat="@drawable/whatsapp_image_2024_07_05_at_17_44_07__1__removebg_preview" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="126dp"
-        android:layout_height="117dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807"
-        app:srcCompat="@drawable/whatsapp_image_2024_07_06_at_06_37_03_removebg_preview" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -109,11 +28,117 @@
         android:layout_height="136dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139"
+        app:layout_constraintVertical_bias="0.193"
         app:srcCompat="@drawable/whatsapp_image_2024_07_06_at_06_37_04_removebg_preview" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/green"
+        android:text="Back"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/report"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/green"
+        android:text="Report"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375" />
+
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/green"
+        android:text="Profile"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="133dp"
+        android:layout_height="136dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722"
+        app:srcCompat="@drawable/whatsapp_image_2024_07_06_at_06_37_03_removebg_preview" />
+
+    <Button
+        android:id="@+id/website"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/green"
+        android:text="Website"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="121dp"
+        android:layout_height="124dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.708"
+        app:srcCompat="@drawable/whatsapp_image_2024_07_05_at_17_44_08_removebg_preview" />
+
+    <Button
+        android:id="@+id/recording"
+        android:layout_width="126dp"
+        android:layout_height="62dp"
+        android:backgroundTint="@color/green"
+        android:text="Records"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
