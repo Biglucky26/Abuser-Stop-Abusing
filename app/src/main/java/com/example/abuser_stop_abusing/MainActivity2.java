@@ -2,6 +2,7 @@ package com.example.abuser_stop_abusing;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,6 +12,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.net.Uri;
+
+import java.io.File;
+
 public class MainActivity2 extends AppCompatActivity {
 
     @Override
@@ -54,5 +58,32 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
+
+        Button recordbtn = findViewById(R.id.recording);
+
+        recordbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openFolder();
+            }
+        });
+
+        Button reportbtn = findViewById(R.id.report);
+
+        reportbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity2.this, MainActivity3.class));
+            }
+        });
+    }
+
+    //function to open directory
+    public void openFolder(){
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()
+                +  File.separator + "Android" + File.separator + "data" + File.separator + "com.example.abuser_stop_abusing" + File.separator + "cache");
+        intent.setDataAndType(uri, "resource/folder");
+        startActivity(Intent.createChooser(intent, "Open folder"));
     }
 }

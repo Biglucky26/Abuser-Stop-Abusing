@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:textAlignment="center"
     android:textSize="24sp"
-    android:textColor="@color/black"
+    android:textColor="@color/white"
     android:textStyle="bold"
 
 />

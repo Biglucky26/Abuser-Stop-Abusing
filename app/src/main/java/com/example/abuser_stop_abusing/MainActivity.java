@@ -1,9 +1,14 @@
 package com.example.abuser_stop_abusing;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
 import android.net.wifi.p2p.WifiP2pManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +17,7 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -71,7 +77,6 @@ public class MainActivity extends AppCompatActivity{
 
         ArrayAdapter adapter = new ArrayAdapter(this, R.layout.selectedspinneritem, levels);
         adapter.setDropDownViewResource(R.layout.spinneritem);
-
         spinner.setAdapter(adapter);
 
         //assign buttons to its corresponding IDs
@@ -87,6 +92,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+        //stop recording when press
         stopRecordingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,7 +106,7 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         });
-
+        //record audio when pressed
         findViewById(R.id.recordButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,16 +135,18 @@ public class MainActivity extends AppCompatActivity{
         // Indicates this device's details have changed.
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
 
-        Button btn = findViewById(R.id.button);
-        Button btnhid = findViewById(R.id.button2);
 
+        //create notification when pressed
+        Button btnhid = findViewById(R.id.button3);
         btnhid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MainActivity2.class));
+                makeNotification();
             }
         });
 
+        //swap to other activity when pressed
+        Button btn = findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -164,6 +172,50 @@ public class MainActivity extends AppCompatActivity{
             }
         }
     }
+
+    //Function to create notification
+    public void makeNotification(){
+
+        String chanelID = "CHANEL_ID_NOTIFICATION";
+        NotificationCompat.Builder builder =
+                new NotificationCompat.Builder(getApplicationContext(), chanelID );
+        builder.setSmallIcon(R.drawable.ic_notifications); //set icon for noti
+        builder.setContentTitle("Report Received"); //notification title
+        builder.setContentText("Someone needs help from level 1"); //Description for notifications
+        builder.setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("data", "Some value here");
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent,PendingIntent.FLAG_MUTABLE);
+        builder.setContentIntent(pendingIntent);
+
+        NotificationManager notificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                NotificationChannel notificationChannel =
+                        notificationManager.getNotificationChannel(chanelID);
+                if(notificationChannel == null) {
+                    int importance = NotificationManager.IMPORTANCE_HIGH;
+                    notificationChannel = new NotificationChannel(chanelID, "desc", importance);
+                    notificationChannel.setLightColor(Color.GREEN);
+                    notificationChannel.enableVibration(true);
+                    notificationManager.createNotificationChannel(notificationChannel);
+                }
+        }
+
+
+        notificationManager.notify(0, builder.build());
+
+
+    }
+
+
 
     private void startRecordingCycle() {
         recording = true;
