@@ -10,6 +10,19 @@
     android:background="@drawable/porp">
 
     <Button
+        android:id="@+id/recordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Start"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
         android:id="@+id/button"
         android:layout_width="314dp"
         android:layout_height="66dp"
@@ -22,7 +35,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/emergencyButton"
         android:layout_width="399dp"
         android:layout_height="354dp"
         android:background="@null"
@@ -33,19 +46,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.313"
         app:srcCompat="@drawable/dewatermark_ai_1720248815175_removebg_preview" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:backgroundTint="#162B2D30"
-        android:rotationX="-4"
-        android:text="_"
-        android:textColorLink="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
