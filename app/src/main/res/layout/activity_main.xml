@@ -34,4 +34,18 @@
         app:layout_constraintVertical_bias="0.313"
         app:srcCompat="@drawable/dewatermark_ai_1720248815175_removebg_preview" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:backgroundTint="#162B2D30"
+        android:rotationX="-4"
+        android:text="_"
+        android:textColorLink="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

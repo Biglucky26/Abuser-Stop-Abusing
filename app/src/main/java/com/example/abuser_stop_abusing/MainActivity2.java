@@ -34,7 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
         });
         Button btn1 = findViewById(R.id.website);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String url = "https://hackathonwebsite.tiiny.site/#impact-section";
@@ -45,14 +45,14 @@ public class MainActivity2 extends AppCompatActivity {
         });
         Button btn2 = findViewById(R.id.profile);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String url = "https://profileid.tiiny.site";
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 
 
-
             }
         });
+    }
 }
