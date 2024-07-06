@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.net.Uri;
 public class MainActivity2 extends AppCompatActivity {
 
     @Override
@@ -32,7 +32,27 @@ public class MainActivity2 extends AppCompatActivity {
                 startActivity(new Intent(MainActivity2.this, MainActivity.class));
             }
         });
+        Button btn1 = findViewById(R.id.website);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://hackathonwebsite.tiiny.site/#impact-section";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
 
 
-    }
+            }
+        });
+        Button btn2 = findViewById(R.id.profile);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://profileid.tiiny.site";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+
+
+
+            }
+        });
 }
