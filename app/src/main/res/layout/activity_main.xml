@@ -20,19 +20,18 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <ImageButton
-        android:id="@+id/biggestbutt"
-        android:layout_width="348dp"
-        android:layout_height="355dp"
+        android:id="@+id/imageButton4"
+        android:layout_width="399dp"
+        android:layout_height="354dp"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.355"
-        app:srcCompat="@drawable/pngtree_red_button_reflection_photo_png_image_13464569" />
-
+        app:layout_constraintVertical_bias="0.313"
+        app:srcCompat="@drawable/dewatermark_ai_1720248815175_removebg_preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
